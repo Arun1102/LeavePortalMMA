@@ -1,0 +1,2 @@
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.DomainModels\obj\Debug\LeavePortalMMA.DomainModels.csproj.AssemblyReference.cache
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.DomainModels\obj\Debug\LeavePortalMMA.DomainModels.csproj.CoreCompileInputs.cache

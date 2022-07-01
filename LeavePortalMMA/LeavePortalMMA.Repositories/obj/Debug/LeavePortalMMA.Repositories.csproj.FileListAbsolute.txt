@@ -1,0 +1,12 @@
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.Repositories\bin\Debug\LeavePortalMMA.Repositories.dll.config
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.Repositories\bin\Debug\LeavePortalMMA.Repositories.dll
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.Repositories\bin\Debug\LeavePortalMMA.Repositories.pdb
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.Repositories\bin\Debug\EntityFramework.dll
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.Repositories\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.Repositories\bin\Debug\EntityFramework.xml
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.Repositories\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.Repositories\obj\Debug\LeavePortalMMA.Repositories.csproj.AssemblyReference.cache
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.Repositories\obj\Debug\LeavePortalMMA.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.Repositories\obj\Debug\LeavePortalMMA.Repositories.csproj.CopyComplete
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.Repositories\obj\Debug\LeavePortalMMA.Repositories.dll
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.Repositories\obj\Debug\LeavePortalMMA.Repositories.pdb
