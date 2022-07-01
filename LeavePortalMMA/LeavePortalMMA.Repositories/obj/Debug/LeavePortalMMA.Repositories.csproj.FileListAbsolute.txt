@@ -10,3 +10,6 @@ C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePorta
 C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.Repositories\obj\Debug\LeavePortalMMA.Repositories.csproj.CopyComplete
 C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.Repositories\obj\Debug\LeavePortalMMA.Repositories.dll
 C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.Repositories\obj\Debug\LeavePortalMMA.Repositories.pdb
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.Repositories\bin\Debug\LeavePortalMMA.DomainModels.dll
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.Repositories\bin\Debug\LeavePortalMMA.DomainModels.pdb
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.Repositories\bin\Debug\LeavePortalMMA.DomainModels.dll.config
