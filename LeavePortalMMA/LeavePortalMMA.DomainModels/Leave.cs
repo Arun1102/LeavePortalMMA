@@ -20,6 +20,6 @@ namespace LeavePortalMMA.DomainModels
 
 
         [ForeignKey("UserID")]
-        public virtual User User { get; set; }
+        public virtual Users User { get; set; }
     }
 }

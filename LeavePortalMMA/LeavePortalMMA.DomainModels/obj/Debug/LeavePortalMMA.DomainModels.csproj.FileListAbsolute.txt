@@ -1,2 +1,12 @@
 C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.DomainModels\obj\Debug\LeavePortalMMA.DomainModels.csproj.AssemblyReference.cache
 C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.DomainModels\obj\Debug\LeavePortalMMA.DomainModels.csproj.CoreCompileInputs.cache
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.DomainModels\bin\Debug\LeavePortalMMA.DomainModels.dll.config
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.DomainModels\bin\Debug\LeavePortalMMA.DomainModels.dll
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.DomainModels\bin\Debug\LeavePortalMMA.DomainModels.pdb
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.DomainModels\bin\Debug\EntityFramework.dll
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.DomainModels\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.DomainModels\bin\Debug\EntityFramework.xml
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.DomainModels\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.DomainModels\obj\Debug\LeavePortalMMA.DomainModels.csproj.CopyComplete
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.DomainModels\obj\Debug\LeavePortalMMA.DomainModels.dll
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.DomainModels\obj\Debug\LeavePortalMMA.DomainModels.pdb
