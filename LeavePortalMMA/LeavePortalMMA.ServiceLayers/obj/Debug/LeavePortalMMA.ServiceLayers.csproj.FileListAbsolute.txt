@@ -10,3 +10,17 @@ C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePorta
 C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.ServiceLayers\obj\Debug\LeavePortalMMA.ServiceLayers.csproj.CopyComplete
 C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.ServiceLayers\obj\Debug\LeavePortalMMA.ServiceLayers.dll
 C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.ServiceLayers\obj\Debug\LeavePortalMMA.ServiceLayers.pdb
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.ServiceLayers\bin\Debug\AutoMapper.dll
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.ServiceLayers\bin\Debug\LeavePortalMMA.DomainModels.dll
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.ServiceLayers\bin\Debug\LeavePortalMMA.Repositories.dll
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.ServiceLayers\bin\Debug\LeavePortalMMA.ViewModels.dll
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.ServiceLayers\bin\Debug\System.ValueTuple.dll
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.ServiceLayers\bin\Debug\LeavePortalMMA.DomainModels.pdb
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.ServiceLayers\bin\Debug\LeavePortalMMA.DomainModels.dll.config
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.ServiceLayers\bin\Debug\LeavePortalMMA.Repositories.pdb
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.ServiceLayers\bin\Debug\LeavePortalMMA.Repositories.dll.config
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.ServiceLayers\bin\Debug\LeavePortalMMA.ViewModels.pdb
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.ServiceLayers\bin\Debug\LeavePortalMMA.ViewModels.dll.config
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.ServiceLayers\bin\Debug\AutoMapper.pdb
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.ServiceLayers\bin\Debug\AutoMapper.xml
+C:\Users\aruna\Downloads\MALAYSIAN MEDICAL ASSOCIATION\LeavePortalMMA\LeavePortalMMA.ServiceLayers\bin\Debug\System.ValueTuple.xml

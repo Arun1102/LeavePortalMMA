@@ -133,6 +133,20 @@
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LeavePortalMMA.DomainModels\LeavePortalMMA.DomainModels.csproj">
+      <Project>{9c91e1cf-0c0b-4dd0-8d49-fb7b95ce1ef1}</Project>
+      <Name>LeavePortalMMA.DomainModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeavePortalMMA.ServiceLayers\LeavePortalMMA.ServiceLayers.csproj">
+      <Project>{d8e6caa7-07df-4f5d-b3ac-d20691e68d14}</Project>
+      <Name>LeavePortalMMA.ServiceLayers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeavePortalMMA.ViewModels\LeavePortalMMA.ViewModels.csproj">
+      <Project>{21b95cf6-6c03-4935-ae98-71ebd26fecb9}</Project>
+      <Name>LeavePortalMMA.ViewModels</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
