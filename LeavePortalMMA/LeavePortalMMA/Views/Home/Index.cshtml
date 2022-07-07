@@ -1,4 +1,9 @@
-﻿<div class="row">
+﻿
+@model List<LeavePortalMMA.ViewModels.LeaveListViewModel>
+
+
+
+<div class="row">
     <div class="col-sm-12">
         <div class="jumbotron">
             <h1>Plan your leave before end of the year</h1>
@@ -9,10 +14,27 @@
 </div>
 <div class="row">
     <div class="col-sm-12">
+
         <div class="jumbotron">
+
             <h1>IMPORTANT !</h1>
             <h3>Public Holidays and Timeoff are not allowed to carry forward</h3>
             <p class="lead">Apply leave 3 days earlier to avoid rejections from management</p>
+            <table>
+                <tr>
+                    
+
+                    @foreach (var item in Model)
+                    {
+
+                       <td> @item.LeaveText</td>
+                       <td>@item.LeaveDateAndTime</td>
+                       <td>@item.UserID</td>
+                       
+                    }
+                </tr>
+            </table>
         </div>
+
     </div>
 </div>
