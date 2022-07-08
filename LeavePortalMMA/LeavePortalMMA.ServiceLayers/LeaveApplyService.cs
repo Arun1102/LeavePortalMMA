@@ -31,17 +31,17 @@ namespace LeavePortalMMA.ServiceLayers
 
         public void ApplyLeave(NewLeaveApplyViewModel qvm)
         {
-            var config = new MapperConfiguration(cfg => { cfg.CreateMap<NewLeaveApplyViewModel, Leave>(); cfg.IgnoreUnmapped(); });
+            var config = new MapperConfiguration(cfg => { cfg.CreateMap<NewLeaveApplyViewModel, Leaves>(); cfg.IgnoreUnmapped(); });
             IMapper mapper = config.CreateMapper();
-            Leave q = mapper.Map<NewLeaveApplyViewModel, Leave>(qvm);
+            Leaves q = mapper.Map<NewLeaveApplyViewModel, Leaves>(qvm);
             qr.ApplyLeave(q); 
         }
 
         public void UpdateLeaveDetails(EditLeaveApplyViewModel qvm)
         {
-            var config = new MapperConfiguration(cfg => { cfg.CreateMap<EditLeaveApplyViewModel, Leave>(); cfg.IgnoreUnmapped(); });
+            var config = new MapperConfiguration(cfg => { cfg.CreateMap<EditLeaveApplyViewModel, Leaves>(); cfg.IgnoreUnmapped(); });
             IMapper mapper = config.CreateMapper();
-            Leave q = mapper.Map<EditLeaveApplyViewModel, Leave>(qvm);
+            Leaves q = mapper.Map<EditLeaveApplyViewModel, Leaves>(qvm);
             qr.UpdateLeaveDetails(q);
         }
 
@@ -58,21 +58,21 @@ namespace LeavePortalMMA.ServiceLayers
 
         public List<LeaveListViewModel> GetAllLeave()
         {
-            List<Leave> q = qr.GetAllLeave();
-            var config = new MapperConfiguration(cfg => { cfg.CreateMap<Leave, LeaveListViewModel>(); cfg.IgnoreUnmapped(); });
+            List<Leaves> q = qr.GetAllLeave();
+            var config = new MapperConfiguration(cfg => { cfg.CreateMap<Leaves, LeaveListViewModel>(); cfg.IgnoreUnmapped(); });
             IMapper mapper = config.CreateMapper();
-            List<LeaveListViewModel> qvm = mapper.Map<List<Leave>, List<LeaveListViewModel>>(q);
+            List<LeaveListViewModel> qvm = mapper.Map<List<Leaves>, List<LeaveListViewModel>>(q);
             return qvm;
         }
 
         public LeaveListViewModel GetLeaveByLeaveID(int LeaveID, int UserID)
         {
-            Leave q = qr.GetLeaveByLeaveID(LeaveID).FirstOrDefault();
+            Leaves q = qr.GetLeaveByLeaveID(LeaveID).FirstOrDefault();
             
             
-            var config = new MapperConfiguration(cfg => { cfg.CreateMap<Leave, LeaveListViewModel>(); cfg.IgnoreUnmapped(); });
+            var config = new MapperConfiguration(cfg => { cfg.CreateMap<Leaves, LeaveListViewModel>(); cfg.IgnoreUnmapped(); });
             IMapper mapper = config.CreateMapper();
-            LeaveListViewModel qvm = mapper.Map<Leave, LeaveListViewModel>(q);
+            LeaveListViewModel qvm = mapper.Map<Leaves, LeaveListViewModel>(q);
 
                
             return qvm;

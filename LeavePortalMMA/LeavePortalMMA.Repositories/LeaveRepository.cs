@@ -10,11 +10,11 @@ namespace LeavePortalMMA.Repositories
 {
     public interface ILeaveRepository
     {
-        void ApplyLeave(Leave u);
-        void UpdateLeaveDetails(Leave u);
+        void ApplyLeave(Leaves u);
+        void UpdateLeaveDetails(Leaves u);
         void DeleteLeave(int uid);
-        List<Leave> GetAllLeave();
-        List<Leave> GetLeaveByLeaveID(int uid);
+        List<Leaves> GetAllLeave();
+        List<Leaves> GetLeaveByLeaveID(int uid);
         void UpdateLeaveCount(int a, int value);
     }
     public class LeaveRepository : ILeaveRepository
@@ -26,15 +26,15 @@ namespace LeavePortalMMA.Repositories
             db = new LeavePortalMMADatabaseDbcontext();
         }
 
-        public void ApplyLeave(Leave u)
+        public void ApplyLeave(Leaves u)
         {
             db.Leave.Add(u);
             db.SaveChanges();
         }
 
-        public void UpdateLeaveDetails(Leave u)
+        public void UpdateLeaveDetails(Leaves u)
         {
-            Leave us = db.Leave.Where(temp => temp.LeaveID == u.LeaveID).FirstOrDefault();
+            Leaves us = db.Leave.Where(temp => temp.LeaveID == u.LeaveID).FirstOrDefault();
             if (us != null)
             {
                 us.LeaveReason = u.LeaveReason;
@@ -45,7 +45,7 @@ namespace LeavePortalMMA.Repositories
 
         public void DeleteLeave(int uid)
         {
-            Leave us = db.Leave.Where(temp => temp.LeaveID == uid).FirstOrDefault();
+            Leaves us = db.Leave.Where(temp => temp.LeaveID == uid).FirstOrDefault();
             if (us != null)
             {
                 db.Leave.Remove(us);
@@ -55,21 +55,21 @@ namespace LeavePortalMMA.Repositories
 
 
 
-        public List<Leave> GetAllLeave()
+        public List<Leaves> GetAllLeave()
         {
-            List<Leave> us = db.Leave.ToList();
+            List<Leaves> us = db.Leave.ToList();
             return us;
         }
 
-        public List<Leave> GetLeaveByLeaveID(int uid)
+        public List<Leaves> GetLeaveByLeaveID(int uid)
         {
-            List<Leave> us = db.Leave.Where(temp => temp.LeaveID == uid).ToList();
+            List<Leaves> us = db.Leave.Where(temp => temp.LeaveID == uid).ToList();
             return us;
         }
 
         public void UpdateLeaveCount(int a, int value)
         {
-            Leave li = db.Leave.Where(temp => temp.LeaveID == a).FirstOrDefault();
+            Leaves li = db.Leave.Where(temp => temp.LeaveID == a).FirstOrDefault();
             if (li != null)
             {
                 li.LeaveCount -= value;

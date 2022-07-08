@@ -10,7 +10,7 @@ namespace LeavePortalMMA.DomainModels
     public class LeavePortalMMADatabaseDbcontext:DbContext
     {
         public DbSet<Users> User { get; set; }
-        public DbSet<Leave> Leave { get; set; }
+        public DbSet<Leaves> Leave { get; set; }
         public DbSet<BalanceLeave> BalanceLeave { get; set; }
     }
 }

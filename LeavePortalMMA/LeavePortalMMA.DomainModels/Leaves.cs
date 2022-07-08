@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LeavePortalMMA.DomainModels
 {
-    public class Leave
+    public class Leaves
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

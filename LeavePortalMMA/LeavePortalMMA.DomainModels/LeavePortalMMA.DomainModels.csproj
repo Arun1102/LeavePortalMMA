@@ -49,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BalanceLeave.cs" />
-    <Compile Include="Leave.cs" />
+    <Compile Include="Leaves.cs" />
     <Compile Include="LeavePortalMMADatabaseDbcontext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Users.cs" />

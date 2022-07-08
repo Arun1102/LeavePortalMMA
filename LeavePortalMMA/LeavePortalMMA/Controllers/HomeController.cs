@@ -12,14 +12,16 @@ namespace LeavePortalMMA.Controllers
     {
         // GET: Home
         ILeaveApplyService ls;
-
+        //IUsersService us;
         public HomeController(ILeaveApplyService ls)
         {
+            
             this.ls = ls;
         }
         public ActionResult Index()
         {
-            List<LeaveListViewModel> leaves = this.ls.GetAllLeave().Take(10).ToList();
+            List<LeaveListViewModel> leaves = this.ls.GetAllLeave().ToList();
+            //List<UserViewModel> users = this.us.GetUsers().ToList();
             return View(leaves);
         }
     }
