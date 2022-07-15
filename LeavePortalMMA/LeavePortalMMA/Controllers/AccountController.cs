@@ -45,9 +45,72 @@ namespace LeavePortalMMA.Controllers
             }
 
 
+        }
+
+        public ActionResult Login()
+        {
+            LoginViewModels lvm = new LoginViewModels();
+            return View(lvm);
+        }
+
+        [ValidateAntiForgeryToken]
+        [HttpPost]
+        public ActionResult Login(LoginViewModels lvm)
+        {
+            if (ModelState.IsValid)
+            {
+                UserViewModel uvm = this.us.GetUsersByEmailandPassword(lvm.Email, lvm.Password);
+                if (uvm != null)
+                {
+                    Session["CurrentUserID"] = uvm.UserID;
+                    Session["CurrentUserName"] = uvm.Name;
+                    Session["CurrentUserEmail"] = uvm.Email;
+                    Session["CurrentUserPassword"] = uvm.Password;
+                    Session["CurrentUserIsAdmin"] = uvm.IsAdmin;
+
+                    if (uvm.IsAdmin)
+                    {
+                        return RedirectToRoute(new { controller = "Home", action = "Index" });
+                    }
+                    else
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("x", "Invalid Email / Password, check with administrator if already have an account");
+                    return View(lvm);
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("x", "Invalid Data");
+                return View(lvm);
+            }
+         }
+
+
+        public ActionResult Logout()
+        {
+            Session.Abandon();
+            return RedirectToAction("Index","Home");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             
-        }
+        
     }
 }

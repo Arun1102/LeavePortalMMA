@@ -91,24 +91,24 @@
         return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
     }
 
-    //$("#txtEmail").blur(function () {
-    //    $.ajax({
-    //        url: "/api/account?email=" + $("#txtEmail").val(), type: "GET", success:
-    //            function (response) {
-    //                if (response == "Not Found") {
-    //                    $(".email-exist").text("");
-    //                    $(".email-exist").parent(".form-group").find(".valid-feedback").css("color", "#28a745");
-    //                }
-    //                else {
-    //                    $(".email-exist").text("Email already registered");
-    //                    $(".email-exist").parent(".form-group").find(".valid-feedback").css("color", "white");
-    //                }
-    //            },
-    //        error: function () {
-    //            $(".email-exist").text("Error");
-    //        }
-    //    });
-    //});
+    $("#txtEmail").blur(function () {
+        $.ajax({
+            url: "/api/account?email=" + $("#txtEmail").val(), type: "GET", success:
+                function (response) {
+                    if (response == "Not Found") {
+                        $(".email-exist").text("");
+                        $(".email-exist").parent(".form-group").find(".valid-feedback").css("color", "#28a745");
+                    }
+                    else {
+                        $(".email-exist").text("Email already registered");
+                        $(".email-exist").parent(".form-group").find(".valid-feedback").css("color", "white");
+                    }
+                },
+            error: function () {
+                $(".email-exist").text("Error");
+            }
+        });
+    });
 </script>
 
 
