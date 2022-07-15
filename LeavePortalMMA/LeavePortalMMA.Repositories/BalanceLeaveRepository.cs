@@ -10,9 +10,10 @@ namespace LeavePortalMMA.Repositories
 {
     public interface IBalanceLeaveRepository
     {
-        void UpdateLeaveCount(int a, int uid, int value);
+        void UpdateLeaveCount(int uid, int value);
+        int getUserBalanceLeave(int b);
     }
-    public class BalanceLeaveRepository
+    public class BalanceLeaveRepository:IBalanceLeaveRepository
     {
         LeavePortalMMADatabaseDbcontext db;
 
@@ -35,7 +36,7 @@ namespace LeavePortalMMA.Repositories
                 updateValue = 1;
             }
 
-            BalanceLeave vo = db.BalanceLeave.Where(temp=>temp.UserID == uid).FirstOrDefault();
+            BalanceLeaves vo = db.BalanceLeave.Where(temp=>temp.UserID == uid).FirstOrDefault();
             
             if (vo != null)
             {
@@ -43,9 +44,25 @@ namespace LeavePortalMMA.Repositories
             }
             else
             {
-                BalanceLeave newVo = new BalanceLeave() { UserID = uid, BalanceValue = updateValue };
+                BalanceLeaves newVo = new BalanceLeaves() { UserID = uid, BalanceValue = updateValue };
             }
             db.SaveChanges();
+        }
+
+        public int getUserBalanceLeave(int b)
+        {
+            
+            BalanceLeaves a = db.BalanceLeave.Where(temp=>temp.UserID == b).FirstOrDefault();
+            int c;
+            if (a != null)
+            {
+                c = a.BalanceValue;
+            }
+            else
+            {
+                c = 0;
+            }
+            return c;
         }
     }
 }

@@ -13,6 +13,7 @@ namespace LeavePortalMMA.ServiceLayers
 {
     public interface IUsersService
     {
+        int InsertUser(RegisterViewModel rvm);
         void UpdateUserDetails(EditUserViewModel uvm);
         void UpdateUserPassword(EditUserPasswordViewModel uvm);
         void DeleteUser(int uid);
@@ -30,7 +31,16 @@ namespace LeavePortalMMA.ServiceLayers
             ur = new UsersRepository();
         }
 
-
+        public int InsertUser(RegisterViewModel rvm)
+        {
+            var config = new MapperConfiguration(cfg => { cfg.CreateMap<RegisterViewModel, Users>(); cfg.IgnoreUnmapped(); });
+            IMapper mapper = config.CreateMapper();
+            Users u = mapper.Map<RegisterViewModel, Users>(rvm);
+            u.PasswordHash = SHA256HashGenerator.GenerateHash(rvm.Password);
+            ur.InsertUser(u);
+            int uid = ur.GetLatestUserID();
+            return uid;
+        }
         public void UpdateUserDetails(EditUserViewModel uvm)
         {
             var config = new MapperConfiguration(cfg => { cfg.CreateMap<EditUserViewModel, Users>(); cfg.IgnoreUnmapped(); });

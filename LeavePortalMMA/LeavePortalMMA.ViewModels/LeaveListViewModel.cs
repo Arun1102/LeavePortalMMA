@@ -17,5 +17,8 @@ namespace LeavePortalMMA.ViewModels
         public int UserID { get; set; }
         public int DepartmentID { get; set; }
 
+        public UserViewModel user { get; set; }
+        public BalanceLeaveViewModel blv { get; set; }
+
     }
 }

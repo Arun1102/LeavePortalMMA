@@ -11,6 +11,6 @@ namespace LeavePortalMMA.DomainModels
     {
         public DbSet<Users> User { get; set; }
         public DbSet<Leaves> Leave { get; set; }
-        public DbSet<BalanceLeave> BalanceLeave { get; set; }
+        public DbSet<BalanceLeaves> BalanceLeave { get; set; }
     }
 }

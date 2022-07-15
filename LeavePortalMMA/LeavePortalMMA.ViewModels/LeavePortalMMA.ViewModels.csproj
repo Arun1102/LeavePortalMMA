@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BalanceLeaveViewModel.cs" />
     <Compile Include="EditLeaveApplyViewModel.cs" />
     <Compile Include="EditUserPasswordViewModel.cs" />
     <Compile Include="EditUserViewModel.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="LoginViewModels.cs" />
     <Compile Include="NewLeaveApplyViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterViewModel.cs" />
     <Compile Include="UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

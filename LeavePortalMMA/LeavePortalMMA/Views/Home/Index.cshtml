@@ -17,24 +17,35 @@
 
         <div class="jumbotron">
 
-            <h1>IMPORTANT !</h1>
-            <h3>Public Holidays and Timeoff are not allowed to carry forward</h3>
-            <p class="lead">Apply leave 3 days earlier to avoid rejections from management</p>
-            <table>
-                <tr>
+            
+            
                     
+                    <table class="table">
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <th>DATE / TIME</th>
+                            <th>LEAVE REASON</th>
+                            <th>USERNAME</th>
+                        </tr>
+                        <tr>
+                            
+                            <td><span class="badge badge-scondary">@item.LeaveDateAndTime</span></td>
+                            <td><span class="badge badge-scondary">@item.LeaveReason</span></td>
+                            <td><span class="badge badge-scondary">@item.user.Name</span></td>
+                            
+                        </tr>
+                            
 
-                    @foreach (var item in Model)
-                    {
 
-                       <td> @item.LeaveDateAndTime</td>
-                       <td>@item.LeaveReason</td>
-                      
-                       
-                    }
-                </tr>
-            </table>
+                        }
+                    </table>
+                
         </div>
 
     </div>
 </div>
+
+<script>
+    $("a[href='/home/index']").attr("id", "active");
+</script>
