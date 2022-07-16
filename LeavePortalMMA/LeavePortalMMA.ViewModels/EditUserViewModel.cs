@@ -10,6 +10,7 @@ namespace LeavePortalMMA.ViewModels
 {
     public class EditUserViewModel
     {
+        public int UserID { get; set; }
         [Required]
         [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")]
         public string Email { get; set; }
@@ -17,5 +18,8 @@ namespace LeavePortalMMA.ViewModels
         [Required]
         [RegularExpression(@"^[A-Z][a-zA-Z]*$")]
         public string Name { get; set; }
+
+        [Required]
+        public string Mobile { get; set; }
     }
 }
