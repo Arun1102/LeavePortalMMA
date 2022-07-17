@@ -1,0 +1,60 @@
+﻿@model List<LeavePortalMMA.ViewModels.LeaveListViewModel>
+
+@{
+    ViewBag.Title = "Leaves";
+}
+
+@*<div class="row">
+        <div class="col-sm-12">
+            <table class="table">
+                @foreach (var item in Model)
+                {
+                    Html.RenderPartial("Leave", item);
+                }
+            </table>
+            @if (Session["CurrentUserName"] != null)
+            {
+                <a href="/questions/create" class="btn btn-primary">Apply Leave</a>
+            }
+        </div>
+    </div>*@
+
+<div class="row">
+    <div class="col-sm-12">
+
+        <div class="jumbotron">
+
+
+
+
+            <table class="table">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th>DATE / TIME</th>
+                        <th>LEAVE REASON</th>
+                        <th>USERNAME</th>
+                    </tr>
+                    <tr>
+
+                        <td><span class="badge badge-scondary">@item.LeaveDateAndTime</span></td>
+                        <td><span class="badge badge-scondary">@item.LeaveReason</span></td>
+                        <td><span class="badge badge-scondary">@item.user.Name</span></td>
+
+                    </tr>
+
+
+
+                }
+            </table>
+           
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $("a[href='/allleaves']").attr("id", "active");
+</script>
+
+

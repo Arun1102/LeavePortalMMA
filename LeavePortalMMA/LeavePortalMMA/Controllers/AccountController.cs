@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using LeavePortalMMA.ServiceLayers;
 using LeavePortalMMA.ViewModels;
-
+using LeavePortalMMA.CustomFilters;
 namespace LeavePortalMMA.Controllers
 {
     public class AccountController : Controller
@@ -99,7 +99,7 @@ namespace LeavePortalMMA.Controllers
 
 
 
-        //[UserAuthorizationFilterAttribute]
+        [UserAuthorizationFilterAttribute]
         public ActionResult ChangeProfile()
         {
             int uid = Convert.ToInt32(Session["CurrentUserID"]);
@@ -110,7 +110,7 @@ namespace LeavePortalMMA.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //[UserAuthorizationFilterAttribute]
+        [UserAuthorizationFilterAttribute]
         public ActionResult ChangeProfile(EditUserViewModel eudvm)
         {
             if (ModelState.IsValid)
@@ -128,6 +128,7 @@ namespace LeavePortalMMA.Controllers
         }
 
 
+        [UserAuthorizationFilterAttribute]
         public ActionResult ChangePassword()
         {
             int uid = Convert.ToInt32(Session["CurrentUserID"]);
@@ -138,7 +139,7 @@ namespace LeavePortalMMA.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //[UserAuthorizationFilterAttribute]
+        [UserAuthorizationFilterAttribute]
         public ActionResult ChangePassword(EditUserPasswordViewModel eupvm)
         {
             if (ModelState.IsValid)

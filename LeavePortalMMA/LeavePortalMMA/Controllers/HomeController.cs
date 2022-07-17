@@ -24,5 +24,20 @@ namespace LeavePortalMMA.Controllers
             //List<UserViewModel> users = this.us.GetUsers().ToList();
             return View(leaves);
         }
+
+        [Route("allleaves")]
+        public ActionResult Leaves()
+        {
+            List<LeaveListViewModel> lv = this.ls.GetAllLeave();
+            return View(lv);
+        }
+
+        public ActionResult Search(string str)
+        {
+            List<LeaveListViewModel> leaves = this.ls.GetAllLeave().Where(temp => temp.LeaveReason.ToLower().Contains(str.ToLower()) || temp.user.Name.ToLower().Contains(str.ToLower())).ToList();
+            ViewBag.str = str;
+            return View(leaves);
+            
+        }
     }
 }
