@@ -17,13 +17,16 @@ namespace LeavePortalMMA.Controllers
         {
             this.us = us;   
         }
+
+        [UserAuthorizationFilterAttribute]
         public ActionResult Register()
         {
             return View();
         }
 
         //to avoid csr attack
-        [ValidateAntiForgeryToken] 
+        [ValidateAntiForgeryToken]
+        [UserAuthorizationFilterAttribute]
         [HttpPost]
         public ActionResult Register(RegisterViewModel rvm)
         {
