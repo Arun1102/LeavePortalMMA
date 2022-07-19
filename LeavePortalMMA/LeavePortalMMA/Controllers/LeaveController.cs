@@ -43,7 +43,14 @@ namespace LeavePortalMMA.Controllers
             }
         }
 
-
+       
+        public ActionResult Delete(int id)
+        {
+            
+            
+            this.qs.DeleteLeave(id);
+            return RedirectToAction("index", "Home");
+        }
 
 
     }

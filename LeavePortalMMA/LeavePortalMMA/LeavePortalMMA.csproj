@@ -235,6 +235,7 @@
     <Content Include="Views\Home\Leaves.cshtml" />
     <Content Include="Views\Home\Search.cshtml" />
     <Content Include="Views\Leave\Create.cshtml" />
+    <Content Include="Views\Home\viewleaves.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

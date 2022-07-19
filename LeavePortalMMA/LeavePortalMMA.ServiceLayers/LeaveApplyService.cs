@@ -18,7 +18,9 @@ namespace LeavePortalMMA.ServiceLayers
         void UpdateLeaveCount(int qid, int value);
         void DeleteLeave(int qid);
         List<LeaveListViewModel> GetAllLeave();
-        LeaveListViewModel GetLeaveByLeaveID(int LeaveID, int UserID);
+        LeaveListViewModel GetLeaveByLeaveID(int leaveID);
+        
+       
     }
     public class LeaveApplyService:ILeaveApplyService
     {
@@ -65,17 +67,18 @@ namespace LeavePortalMMA.ServiceLayers
             return qvm;
         }
 
-        public LeaveListViewModel GetLeaveByLeaveID(int LeaveID, int UserID)
+        public LeaveListViewModel GetLeaveByLeaveID(int leaveID)
         {
-            Leaves q = qr.GetLeaveByLeaveID(LeaveID).FirstOrDefault();
+            Leaves q = qr.GetLeaveByLeaveID(leaveID).FirstOrDefault();
             
             
             var config = new MapperConfiguration(cfg => { cfg.CreateMap<Leaves, LeaveListViewModel>(); cfg.IgnoreUnmapped(); });
             IMapper mapper = config.CreateMapper();
-            LeaveListViewModel qvm = mapper.Map<Leaves, LeaveListViewModel>(q);
+           LeaveListViewModel qvm = mapper.Map<Leaves, LeaveListViewModel>(q);
 
                
             return qvm;
         }
+       
     }
 }

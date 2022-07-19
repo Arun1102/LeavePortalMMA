@@ -41,6 +41,11 @@
                         <td><span class="badge badge-scondary">@item.LeaveReason</span></td>
                         <td><span class="badge badge-scondary">@item.user.Name</span></td>
 
+                        @if (Convert.ToInt32(Session["CurrentUserID"]) == item.user.UserID)
+                        {
+                            <td><span class="badge badge-scondary"><a href="/home/delete">Delete Applied leave</a></span></td>
+                        }
+
                     </tr>
 
 

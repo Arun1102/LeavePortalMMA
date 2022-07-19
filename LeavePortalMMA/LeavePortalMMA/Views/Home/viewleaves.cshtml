@@ -5,19 +5,19 @@
 }
 
 @*<div class="row">
-    <div class="col-sm-12">
-        <table class="table">
-            @foreach (var item in Model)
+        <div class="col-sm-12">
+            <table class="table">
+                @foreach (var item in Model)
+                {
+                    Html.RenderPartial("Leave", item);
+                }
+            </table>
+            @if (Session["CurrentUserName"] != null)
             {
-                Html.RenderPartial("Leave", item);
+                <a href="/questions/create" class="btn btn-primary">Apply Leave</a>
             }
-        </table>
-        @if (Session["CurrentUserName"] != null)
-        {
-            <a href="/questions/create" class="btn btn-primary">Apply Leave</a>
-        }
-    </div>
-</div>*@
+        </div>
+    </div>*@
 
 <div class="row">
     <div class="col-sm-12">
@@ -40,12 +40,10 @@
                         <td><span class="badge badge-scondary">@item.LeaveDateAndTime</span></td>
                         <td><span class="badge badge-scondary">@item.LeaveReason</span></td>
                         <td><span class="badge badge-scondary">@item.user.Name</span></td>
-
                         @if (Convert.ToInt32(Session["CurrentUserID"]) == item.user.UserID || Convert.ToInt32(Session["CurrentUserIsAdmin"]) != 0)
                         {
-                            <td><span class="badge badge-scondary" ><a href="/Leave/Delete/@item.LeaveID">Delete Applied leave</a></span></td>
+                            <td><span class="badge badge-scondary"><a href="/Leave/Delete/@item.LeaveID">Delete Applied leave</a></span></td>
                         }
-
                     </tr>
 
 

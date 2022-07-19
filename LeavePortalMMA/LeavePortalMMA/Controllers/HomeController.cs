@@ -28,9 +28,16 @@ namespace LeavePortalMMA.Controllers
         [Route("allleaves")]
         public ActionResult Leaves()
         {
+            
             List<LeaveListViewModel> lv = this.ls.GetAllLeave();
+            
             return View(lv);
         }
+
+       
+            
+
+        
 
         public ActionResult Search(string str)
         {
@@ -39,5 +46,7 @@ namespace LeavePortalMMA.Controllers
             return View(leaves);
             
         }
+
+        
     }
 }
