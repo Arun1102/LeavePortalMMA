@@ -15,6 +15,8 @@ namespace LeavePortalMMA.Repositories
         void DeleteLeave(int uid);
         List<Leaves> GetAllLeave();
         List<Leaves> GetLeaveByLeaveID(int uid);
+
+        List<Leaves> GetLeaveByLeaveUserID(int uid);
         void UpdateLeaveCount(int a, int value);
     }
     public class LeaveRepository : ILeaveRepository
@@ -64,6 +66,12 @@ namespace LeavePortalMMA.Repositories
         public List<Leaves> GetLeaveByLeaveID(int uid)
         {
             List<Leaves> us = db.Leave.Where(temp => temp.LeaveID == uid).ToList();
+            return us;
+        }
+
+        public List<Leaves> GetLeaveByLeaveUserID(int uid)
+        {
+            List<Leaves> us = db.Leave.Where(temp => temp.UserID == uid).ToList();
             return us;
         }
 

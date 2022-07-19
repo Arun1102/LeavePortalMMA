@@ -12,6 +12,7 @@ namespace LeavePortalMMA.Controllers
     {
         // GET: Leave
         ILeaveApplyService qs;
+        
 
         public LeaveController(ILeaveApplyService qs)
         {
@@ -52,8 +53,14 @@ namespace LeavePortalMMA.Controllers
             return RedirectToAction("index", "Home");
         }
 
+        
+
 
     }
+
+
+
+
 
 
 

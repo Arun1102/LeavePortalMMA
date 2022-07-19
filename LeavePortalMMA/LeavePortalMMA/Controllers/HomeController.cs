@@ -25,14 +25,23 @@ namespace LeavePortalMMA.Controllers
             return View(leaves);
         }
 
-        [Route("allleaves")]
-        public ActionResult Leaves()
+        public ActionResult Contact()
         {
-            
-            List<LeaveListViewModel> lv = this.ls.GetAllLeave();
-            
-            return View(lv);
+            return View();
         }
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        //[Route("allleaves")]
+        //public ActionResult Leaves()
+        //{
+            
+        //    List<LeaveListViewModel> lv = this.ls.GetAllLeave();
+            
+        //    return View(lv);
+        //}
 
        
             
@@ -47,6 +56,14 @@ namespace LeavePortalMMA.Controllers
             
         }
 
-        
+        [Route("allleaves")]
+        public ActionResult Viewleaves()
+        {
+            int uid = Convert.ToInt32(Session["CurrentUserID"]);
+            List<LeaveListViewModel>leaves = this.ls.GetLeaveByUserID(uid);
+            return View(leaves);
+        }
+
+
     }
 }
