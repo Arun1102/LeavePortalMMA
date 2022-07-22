@@ -15,6 +15,7 @@ namespace LeavePortalMMA
             var container = new UnityContainer();
             container.RegisterType<ILeaveApplyService, LeaveApplyService>();
             container.RegisterType<IUsersService, UsersService>();
+            container.RegisterType<ICategoriesServiceLayer, CategoriesServiceLayer>();
             DependencyResolver.SetResolver(new Unity.Mvc5.UnityDependencyResolver(container));
 
             GlobalConfiguration.Configuration.DependencyResolver = new Unity.WebApi.UnityDependencyResolver(container);

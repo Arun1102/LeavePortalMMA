@@ -16,10 +16,15 @@ namespace LeavePortalMMA.DomainModels
         public string LeaveReason { get; set; }
         public DateTime LeaveDateAndTime { get; set; }
         public int UserID { get; set; }
+
+        public int CategoryID { get; set; }
         public int LeaveCount { get; set; }
 
 
         [ForeignKey("UserID")]
         public virtual Users User { get; set; }
+
+        [ForeignKey("CategoryID")]
+        public virtual Categories Category { get; set; }
     }
 }

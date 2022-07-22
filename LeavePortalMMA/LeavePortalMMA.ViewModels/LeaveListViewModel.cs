@@ -18,6 +18,8 @@ namespace LeavePortalMMA.ViewModels
         public int DepartmentID { get; set; }
 
         public UserViewModel user { get; set; }
+
+        public CategoryViewModel category { get; set; }
         public BalanceLeaveViewModel blv { get; set; }
 
     }

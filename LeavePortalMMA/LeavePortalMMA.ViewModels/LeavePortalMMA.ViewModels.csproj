@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BalanceLeaveViewModel.cs" />
+    <Compile Include="CategoryViewModel.cs" />
     <Compile Include="EditLeaveApplyViewModel.cs" />
     <Compile Include="EditUserPasswordViewModel.cs" />
     <Compile Include="EditUserViewModel.cs" />

@@ -6,22 +6,13 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 namespace LeavePortalMMA.ViewModels
 {
-    public class NewLeaveApplyViewModel
+    public class CategoryViewModel
     {
-        //[Required]
-        //public String ApplicationId { get; set; }
-       [Required]
-        public string LeaveReason { get; set; }
-
-        [Required]
-        public DateTime LeaveDateAndTime { get; set; }
-
-        [Required]
-        public int UserID { get; set; }
         [Required]
         public int CategoryID { get; set; }
+        [Required]
+        public string CategoryName { get; set; }
     }
 }

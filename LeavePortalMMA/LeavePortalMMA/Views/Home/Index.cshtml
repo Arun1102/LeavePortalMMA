@@ -17,30 +17,56 @@
 
         <div class="jumbotron">
 
-            
-            
-                    
-                    <table class="table">
-                        @foreach (var item in Model)
-                        {
+            @if (Convert.ToInt32(Session["CurrentUserIsAdmin"]) != 0)
+            {
+                <table class="table">
+                    @foreach (var item in Model)
+                    {
                         <tr>
                             <th>DATE / TIME</th>
                             <th>LEAVE REASON</th>
                             <th>USERNAME</th>
                         </tr>
                         <tr>
-                            
+
                             <td><span class="badge badge-scondary">@item.LeaveDateAndTime</span></td>
                             <td><span class="badge badge-scondary">@item.LeaveReason</span></td>
                             <td><span class="badge badge-scondary">@item.user.Name</span></td>
-                            
+
                         </tr>
-                            
 
 
-                        }
-                    </table>
-                
+
+                    }
+                </table>
+            }
+            else
+            {
+                <img src="~/Images/medical.png" />
+            }
+
+
+            @*<table class="table">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>DATE / TIME</th>
+                    <th>LEAVE REASON</th>
+                    <th>USERNAME</th>
+                </tr>
+                <tr>
+
+                    <td><span class="badge badge-scondary">@item.LeaveDateAndTime</span></td>
+                    <td><span class="badge badge-scondary">@item.LeaveReason</span></td>
+                    <td><span class="badge badge-scondary">@item.user.Name</span></td>
+
+                </tr>
+
+
+
+            }
+        </table>*@
+
         </div>
 
     </div>

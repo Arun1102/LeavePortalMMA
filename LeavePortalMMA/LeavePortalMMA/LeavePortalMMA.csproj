@@ -156,6 +156,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Styles.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\medical.png" />
     <Content Include="Images\mma.png" />
     <Content Include="Images\profile.jpg" />
     <Content Include="Images\profile2.png" />

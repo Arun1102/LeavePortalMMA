@@ -43,8 +43,9 @@
 
                         @if (Convert.ToInt32(Session["CurrentUserID"]) == item.user.UserID || Convert.ToInt32(Session["CurrentUserIsAdmin"]) != 0)
                         {
-                            <td><span class="badge badge-scondary" ><a href="/Leave/Delete/@item.LeaveID">Delete Applied leave</a></span></td>
+                            <td><span class="badge badge-scondary"><a href="/Leave/Delete/@item.LeaveID">Delete Applied leave</a></span></td>
                         }
+                        <td><span class="badge badge-scondary">@item.category.CategoryName</span></td>
 
                     </tr>
 

@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BalanceLeaves.cs" />
+    <Compile Include="Categories.cs" />
     <Compile Include="Leaves.cs" />
     <Compile Include="LeavePortalMMADatabaseDbcontext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

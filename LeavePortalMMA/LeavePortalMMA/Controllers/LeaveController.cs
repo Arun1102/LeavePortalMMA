@@ -12,14 +12,17 @@ namespace LeavePortalMMA.Controllers
     {
         // GET: Leave
         ILeaveApplyService qs;
-        
+        ICategoriesServiceLayer cs;
 
-        public LeaveController(ILeaveApplyService qs)
+        public LeaveController(ILeaveApplyService qs, ICategoriesServiceLayer cs)
         {
             this.qs = qs;
+            this.cs = cs;
         }
         public ActionResult Create()
         {
+            List<CategoryViewModel> categories = this.cs.GetCategories();
+            ViewBag.categories = categories;
             return View();
         }
 
@@ -34,6 +37,7 @@ namespace LeavePortalMMA.Controllers
 
                 qvm.LeaveDateAndTime = DateTime.Now;
                 qvm.UserID = Convert.ToInt32(Session["CurrentUserID"]);
+                
                 this.qs.ApplyLeave(qvm);
                 return RedirectToAction("index", "Home");
             }
