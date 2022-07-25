@@ -155,7 +155,11 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Styles.css" />
+    <Content Include="Images\A3.jpg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\A1.jpg" />
+    <Content Include="Images\A2.jpg" />
+    <Content Include="Images\A4.jpg" />
     <Content Include="Images\medical.png" />
     <Content Include="Images\mma.png" />
     <Content Include="Images\profile.jpg" />
@@ -239,6 +243,7 @@
     <Content Include="Views\Home\viewleaves.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Leave\UpdateCategory.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

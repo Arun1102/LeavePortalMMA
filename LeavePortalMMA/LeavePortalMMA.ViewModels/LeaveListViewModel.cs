@@ -15,8 +15,9 @@ namespace LeavePortalMMA.ViewModels
         public string LeaveReason { get; set; }
         public DateTime LeaveDateAndTime { get; set; }
         public int UserID { get; set; }
-        public int DepartmentID { get; set; }
+        public int CategoryID { get; set; }
 
+        public int CategoryName { get; set; }
         public UserViewModel user { get; set; }
 
         public CategoryViewModel category { get; set; }

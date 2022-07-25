@@ -12,7 +12,7 @@ namespace LeavePortalMMA.ViewModels
     public class NewLeaveApplyViewModel
     {
         //[Required]
-        //public String ApplicationId { get; set; }
+        public String LeaveId { get; set; }
        [Required]
         public string LeaveReason { get; set; }
 

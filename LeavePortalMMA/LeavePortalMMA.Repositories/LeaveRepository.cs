@@ -12,6 +12,7 @@ namespace LeavePortalMMA.Repositories
     {
         void ApplyLeave(Leaves u);
         void UpdateLeaveDetails(Leaves u);
+        void UpdateCategoryDetails(Leaves u);
         void DeleteLeave(int uid);
         List<Leaves> GetAllLeave();
         List<Leaves> GetLeaveByLeaveID(int uid);
@@ -34,15 +35,36 @@ namespace LeavePortalMMA.Repositories
             db.SaveChanges();
         }
 
+
+        
+
         public void UpdateLeaveDetails(Leaves u)
         {
             Leaves us = db.Leave.Where(temp => temp.LeaveID == u.LeaveID).FirstOrDefault();
+            
             if (us != null)
             {
                 us.LeaveReason = u.LeaveReason;
                 us.LeaveDateAndTime = u.LeaveDateAndTime;
+                us.CategoryID = u.CategoryID;
+                us.Category = us.Category;
                 db.SaveChanges();
             }
+           
+        }
+
+        public void UpdateCategoryDetails(Leaves u)
+        {
+            Leaves us = db.Leave.Where(temp => temp.LeaveID == u.LeaveID).FirstOrDefault();
+
+            if (us != null)
+            {
+                
+                us.CategoryID = u.CategoryID;
+                us.Category = us.Category;
+                db.SaveChanges();
+            }
+
         }
 
         public void DeleteLeave(int uid)

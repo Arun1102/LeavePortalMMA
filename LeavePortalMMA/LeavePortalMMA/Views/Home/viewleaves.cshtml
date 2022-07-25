@@ -30,11 +30,13 @@
             <table class="table">
                 @foreach (var item in Model)
                 {
-                    <tr>
-                        <th>DATE / TIME</th>
-                        <th>LEAVE REASON</th>
-                        <th>USERNAME</th>
-                    </tr>
+                <tr>
+                    <th>DATE / TIME</th>
+                    <th>LEAVE REASON</th>
+                    <th>USERNAME</th>
+                    <th>DELETE APPLICATION</th>
+                    <th>STATUS</th>
+                </tr>
                     <tr>
 
                         <td><span class="badge badge-scondary">@item.LeaveDateAndTime</span></td>
@@ -44,7 +46,9 @@
                         {
                             <td><span class="badge badge-scondary"><a href="/Leave/Delete/@item.LeaveID">Delete Applied leave</a></span></td>
                         }
-                        <td><span class="badge badge-scondary">@item.category.CategoryName</span></td>
+                        <td><span class="categorystatus">@item.category.CategoryName</span></td>
+                        <td><a href="/Leave/UpdateCategory/@item.LeaveID">Update status</a></td>
+                    @*<td><span class="categorystatus">Requested</span></td>*@
                     </tr>
 
 
@@ -62,6 +66,14 @@
 
 <script>
     $("a[href='/allleaves']").attr("id", "active");
+
+    $("document").ready(function () {
+
+        $("span:contains(Requested)").css('color', 'grey')
+        $("span:contains(Leave Rejected)").css('color', 'red')
+        $("span:contains(Approved)").css('color', 'mediumseagreen')   
+        
+    })
 </script>
 
 

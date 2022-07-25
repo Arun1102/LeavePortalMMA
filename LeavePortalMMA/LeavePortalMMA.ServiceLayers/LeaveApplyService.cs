@@ -15,6 +15,10 @@ namespace LeavePortalMMA.ServiceLayers
     {
         void ApplyLeave(NewLeaveApplyViewModel qvm);
         void UpdateLeaveDetails(EditLeaveApplyViewModel qvm);
+
+        void UpdateCategoryDetails(EditLeaveApplyViewModel qvm);
+        
+
         void UpdateLeaveCount(int qid, int value);
         void DeleteLeave(int qid);
         List<LeaveListViewModel> GetAllLeave();
@@ -48,6 +52,15 @@ namespace LeavePortalMMA.ServiceLayers
             Leaves q = mapper.Map<EditLeaveApplyViewModel, Leaves>(qvm);
             qr.UpdateLeaveDetails(q);
         }
+
+        public void UpdateCategoryDetails(EditLeaveApplyViewModel qvm)
+        {
+            var config = new MapperConfiguration(cfg => { cfg.CreateMap<EditLeaveApplyViewModel, Leaves>(); cfg.IgnoreUnmapped(); });
+            IMapper mapper = config.CreateMapper();
+            Leaves q = mapper.Map<EditLeaveApplyViewModel, Leaves>(qvm);
+            qr.UpdateCategoryDetails(q);
+        }
+
 
         public void UpdateLeaveCount(int qid, int value)
         {

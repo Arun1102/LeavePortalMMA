@@ -10,14 +10,19 @@ namespace LeavePortalMMA.ViewModels
 {
     public class EditLeaveApplyViewModel
     {
-        [Required]
+        //[Required]
         public int LeaveID { get; set; }
         [Required]
         public string LeaveText { get; set; }
         [Required]
         public DateTime LeaveDateAndTime { get; set; }
 
+        //[Required]
+        public int UserID { get; set; }
         [Required]
-        public int DepartmentID { get; set; }
+        public int CategoryID { get; set; }
+
+        [Required]
+        public int CategoryName { get; set; }
     }
 }
