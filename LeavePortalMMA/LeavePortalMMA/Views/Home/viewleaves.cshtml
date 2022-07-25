@@ -37,19 +37,23 @@
                     <th>DELETE APPLICATION</th>
                     <th>STATUS</th>
                 </tr>
-                    <tr>
+                <tr>
 
-                        <td><span class="badge badge-scondary">@item.LeaveDateAndTime</span></td>
-                        <td><span class="badge badge-scondary">@item.LeaveReason</span></td>
-                        <td><span class="badge badge-scondary">@item.user.Name</span></td>
-                        @if (Convert.ToInt32(Session["CurrentUserID"]) == item.user.UserID || Convert.ToInt32(Session["CurrentUserIsAdmin"]) != 0)
-                        {
-                            <td><span class="badge badge-scondary"><a href="/Leave/Delete/@item.LeaveID">Delete Applied leave</a></span></td>
-                        }
-                        <td><span class="categorystatus">@item.category.CategoryName</span></td>
-                        <td><a href="/Leave/UpdateCategory/@item.LeaveID">Update status</a></td>
+                    <td><span class="badge badge-scondary">@item.LeaveDateAndTime</span></td>
+                    <td><span class="badge badge-scondary">@item.LeaveReason</span></td>
+                    <td><span class="badge badge-scondary">@item.user.Name</span></td>
+                    @if (Convert.ToInt32(Session["CurrentUserID"]) == item.user.UserID || Convert.ToInt32(Session["CurrentUserIsAdmin"]) != 0)
+                    {
+                        <td><span class="badge badge-scondary"><a href="/Leave/Delete/@item.LeaveID">Delete Applied leave</a></span></td>
+                    }
+                    <td><span class="categorystatus">@item.category.CategoryName</span></td>
+                    @if (Convert.ToInt32(Session["CurrentUserIsAdmin"]) != 0 && Session["CurrentUserName"] != null)
+                    {
+                         <td><a href="/Leave/UpdateCategory/@item.LeaveID">Update status</a></td>
+                    }
+                    @*<td><a href="/Leave/UpdateCategory/@item.LeaveID">Update status</a></td>*@
                     @*<td><span class="categorystatus">Requested</span></td>*@
-                    </tr>
+                </tr>
 
 
 

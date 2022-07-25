@@ -27,8 +27,6 @@ namespace LeavePortalMMA.Controllers
         {
             List<CategoryViewModel> categories = this.cs.GetCategories();
             ViewBag.categories = categories;
-            //int uid = Convert.ToInt32(Session["CurrentUserID"]);
-            //LeaveListViewModel lvm = this.qs.GetLeaveByUserID(uid).FirstOrDefault();
             LeaveListViewModel lvm = this.qs.GetLeaveByLeaveID(id);
             EditLeaveApplyViewModel eudvm = new EditLeaveApplyViewModel() { LeaveID = lvm.LeaveID,UserID=lvm.UserID, LeaveText = lvm.LeaveReason };
             

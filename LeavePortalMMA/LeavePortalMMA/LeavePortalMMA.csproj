@@ -244,6 +244,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Leave\UpdateCategory.cshtml" />
+    <Content Include="Views\Home\ViewSpecialAdminLeaves.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

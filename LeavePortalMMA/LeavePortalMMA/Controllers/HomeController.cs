@@ -60,7 +60,16 @@ namespace LeavePortalMMA.Controllers
         public ActionResult Viewleaves()
         {
             int uid = Convert.ToInt32(Session["CurrentUserID"]);
+            
             List<LeaveListViewModel>leaves = this.ls.GetLeaveByUserID(uid);
+            return View(leaves);
+        }
+
+
+        [Route("adminleaves")]
+        public ActionResult ViewSpecialAdminLeaves()
+        {
+            List<LeaveListViewModel> leaves = this.ls.GetAllLeave();
             return View(leaves);
         }
 

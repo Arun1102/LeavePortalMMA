@@ -45,6 +45,7 @@
                     {
                         <li class="nav-item">
                             <a class="nav-link" href="/account/register">Register</a>
+                            
                         </li>
                     }
 
@@ -64,6 +65,10 @@
                                 <a class="dropdown-item" href="/account/logout">Logout</a>
                                 <a class="dropdown-item" href="/account/changeprofile">Change Profile</a>
                                 <a class="dropdown-item" href="/account/changepassword">Change Password</a>
+                                @if (Convert.ToInt32(Session["CurrentUserIsAdmin"]) != 0 && Session["CurrentUserName"] != null)
+                                {
+                                    <a class="dropdown-item" href="/adminleaves">Employee Leaves</a>
+                                }
                             </div>
                         </li>
                     }
