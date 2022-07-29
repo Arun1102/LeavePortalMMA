@@ -14,9 +14,9 @@ namespace LeavePortalMMA.ServiceLayers
 {
     public interface IBalanceLeaveServiceLayer
     {
-        //int getUserBalanceLeave(int b);
+        //void UpdateUserBalanceLeave(BalanceLeaveViewModel b);
     }
-    public class BalanceLeaveServiceLayer
+    public class BalanceLeaveServiceLayer: IBalanceLeaveServiceLayer
     {
         IBalanceLeaveRepository qr;
 
@@ -25,13 +25,13 @@ namespace LeavePortalMMA.ServiceLayers
             qr = new BalanceLeaveRepository();
         }
 
-        //public BalanceLeaveViewModel getUserBalanceLeave(int b)
+        //public void UpdateUserBalanceLeave(BalanceLeaveViewModel b)
         //{
-        //    int q = qr.getUserBalanceLeave(b);
-        //    var config = new MapperConfiguration(cfg => { cfg.CreateMap<BalanceLeaves, BalanceLeaveViewModel>(); cfg.IgnoreUnmapped(); });
+            
+        //    var config = new MapperConfiguration(cfg => { cfg.CreateMap<BalanceLeaveViewModel, BalanceLeaves>(); cfg.IgnoreUnmapped(); });
         //    IMapper mapper = config.CreateMapper();
-        //    BalanceLeaveViewModel qvm = mapper.Map< BalanceLeaves, BalanceLeaveViewModel> (q);
-        //    return qvm;
+        //    BalanceLeaves qvm = mapper.Map<BalanceLeaveViewModel, BalanceLeaves>(b);
+        //    qr.getUserBalanceLeave(qvm);
         //}
 
     }

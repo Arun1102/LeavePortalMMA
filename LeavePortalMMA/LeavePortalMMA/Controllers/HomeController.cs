@@ -22,6 +22,11 @@ namespace LeavePortalMMA.Controllers
         {
             List<LeaveListViewModel> leaves = this.ls.GetAllLeave().ToList();
             //List<UserViewModel> users = this.us.GetUsers().ToList();
+            List<LeaveListViewModel> lvm = this.ls.GetAllLeave();
+            //int a = lvm.Where(temp => temp.UserID == Convert.ToInt32(Session["CurrentUserID"])).ToList().Count();
+            int a = lvm.Where(temp => temp.UserID == Convert.ToInt32(Session["CurrentUserID"]) && temp.CategoryID == 3).ToList().Count();
+            int vvalue = a;
+            Session["CurrentUservvalue"] = vvalue;
             return View(leaves);
         }
 

@@ -17,6 +17,8 @@ namespace LeavePortalMMA.ViewModels
         public int UserID { get; set; }
         public int CategoryID { get; set; }
 
+        public int LeaveCount { get; set; }
+
         public int CategoryName { get; set; }
         public UserViewModel user { get; set; }
 

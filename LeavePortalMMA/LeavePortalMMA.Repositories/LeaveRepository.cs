@@ -47,7 +47,8 @@ namespace LeavePortalMMA.Repositories
                 us.LeaveReason = u.LeaveReason;
                 us.LeaveDateAndTime = u.LeaveDateAndTime;
                 us.CategoryID = u.CategoryID;
-                us.Category = us.Category;
+                us.Category = u.Category;
+                us.LeaveCount = u.LeaveCount;
                 db.SaveChanges();
             }
            

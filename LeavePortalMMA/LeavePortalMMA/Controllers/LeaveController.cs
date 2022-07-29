@@ -59,11 +59,24 @@ namespace LeavePortalMMA.Controllers
         }
 
 
+        //public ActionResult LeavesAvailable(int a)
+        //{
+        //    BalanceLeaveViewModel balanceLeave = this.GetBalanceLeave(a);
+        //    return View();  
+        //}
+
+
+
         [UserAuthorizationFilterAttribute]
         public ActionResult Create()
         {
             List<CategoryViewModel> categories = this.cs.GetCategories();
             ViewBag.categories = categories;
+            //List<LeaveListViewModel> lvm = this.qs.GetAllLeave();
+            //int a = lvm.Where(temp=>temp.UserID == Convert.ToInt32(Session["CurrentUserID"])).ToList().Count();
+            //int vvalue = a ;
+            //Session["CurrentUservvalue"] = vvalue;
+            //ViewBag.vvalue = vvalue;
             return View();
         }
 
@@ -80,7 +93,6 @@ namespace LeavePortalMMA.Controllers
                 //qvm.CategoryID = Convert.ToInt32(Session["CurrentCategoryID"]);
                 
                 qvm.UserID = Convert.ToInt32(Session["CurrentUserID"]);
-                
                 this.qs.ApplyLeave(qvm);
                 return RedirectToAction("index", "Home");
             }
@@ -97,8 +109,14 @@ namespace LeavePortalMMA.Controllers
             
             
             this.qs.DeleteLeave(id);
+            //List<LeaveListViewModel> lvm = this.qs.GetAllLeave();
+            //int a = lvm.Where(temp => temp.UserID == Convert.ToInt32(Session["CurrentUserID"])).ToList().Count();
+            //int vvalue = a ;
+            //ViewBag.vvalue = vvalue;
             return RedirectToAction("index", "Home");
         }
+
+        
 
         
 
