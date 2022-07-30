@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col-sm-12">
         <h1>Leave Applications </h1>
-        <h3>Out of 15 Annual leaves you have used  @Convert.ToInt32(Session["CurrentUservvalue"])</h3>
+        <h3 class="blockquote-footer">Out of 15 Annual leaves you have applied  @Convert.ToInt32(Session["CurrentUserbvalue"])</h3>
         <form class="needs-validation" novalidate="novalidate" action="/leave/create" method="post">
             @Html.AntiForgeryToken()
             <div class="form-row">
@@ -28,10 +28,13 @@
                     <label for="drpCategory">Category</label>
                     <select class="form-control" id="drpCategory" name="CategoryID" required="required">
                         <option value="">Please Select</option>
-                        @foreach (var item in ViewBag.Categories)
-                        {
-                            <option value="@item.CategoryID">@item.CategoryName</option>
-                        }
+                        @*@foreach (var item in ViewBag.Categories)
+                    {
+                        <option value="@item.CategoryID">@item.CategoryName</option>
+                    }*@
+
+                        <option value="1">Requested</option>
+
                     </select>
                     <div class="valid-feedback">
                         Looks good!
@@ -41,10 +44,14 @@
                     </div>
                 </div>
             </div>
-
+            @*@if (@Convert.ToInt32(Session["CurrentUservvalue"]) != 15 && @Convert.ToInt32(Session["CurrentUserbvalue"]) !=15)*@
+            @if (@Convert.ToInt32(Session["CurrentUserbvalue"]) != 15 )
+            {
             <button type="submit" class="btn btn-primary">Add Leave</button>
+            }
 
-           
+
+
             @Html.ValidationSummary()
         </form>
     </div>
